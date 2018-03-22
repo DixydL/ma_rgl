@@ -46,7 +46,7 @@ pub mod matrix {
 
             let s_x = 2f32/(right-left);
             let s_y = 2f32/(top-bottom);
-            let s_z = 1;
+            let s_z = -2f32/(fear-near);
 
             let t_x = -((right+left)/(right-left));
             let t_y = -((top+bottom)/(top-bottom));

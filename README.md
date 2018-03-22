@@ -3,10 +3,12 @@
 Mathematics rust OpenGL library absolutelly written in rust lang. Alternative OpenGL Mathematics
 
 # Example
-Cargo:
+### Cargo:
+```
 ma_rgl = { git = "https://github.com/DixydL/ma_rgl.git" }
-
-Source:
+```
+### Source:
+```
 use ma_rgl::matrix::Matrix;
 
 
@@ -21,4 +23,4 @@ let matrix_out = matrix_1 * matrix_2;
 
 get matrix 4x4
 let mat = matrix_out.get_matrix();
-
+```

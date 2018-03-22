@@ -44,9 +44,9 @@ pub mod matrix {
 
         pub fn orthographic(right: f32, left:f32, top:f32, bottom: f32, fear: f32, near: f32 ) -> Matrix{
 
-            let s_x = 2/(right-left);
-            let s_y = 2/(top-bottom);
-            let s_z = -2/(fear-near);
+            let s_x = 2f32/(right-left);
+            let s_y = 2f32/(top-bottom);
+            let s_z = -2f32/(fear-near);
 
             let t_x = -((right+left)/(right-left));
             let t_y = -((top+bottom)/(top-bottom));

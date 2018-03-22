@@ -50,7 +50,7 @@ pub mod matrix {
 
             let t_x = -((right+left)/(right-left));
             let t_y = -((top+bottom)/(top-bottom));
-            let t_z = -((fear+near)/(fear-near));
+            let t_z = 0f32;
 
             let mut mat4 = Matrix::get_simple_matrix_4();
 

@@ -42,6 +42,31 @@ pub mod matrix {
             Matrix::set_matrix(mat4)
         }
 
+        pub fn orthographic(right: f32, left:f32, top:f32, bottom: f32, fear: f32, near: f32 ) -> Matrix{
+
+            let s_x = 2/(right-left);
+            let s_y = 2/(top-bottom);
+            let s_z = -2/(fear-near);
+
+            let t_x = -((right+left)/(right-left));
+            let t_y = -((top+bottom)/(top-bottom));
+            let t_z = -((fear+near)/(fear-near));
+
+            let mut mat4 = Matrix::get_simple_matrix_4();
+
+            //Scaling
+            mat4[0][0] = s_x;
+            mat4[1][1] = s_y;
+            mat4[2][2] = s_z;
+            //Transform
+            mat4[0][3] = t_x;
+            mat4[1][3] = t_y;
+            mat4[2][3] = t_z;
+
+            Matrix::set_matrix(mat4)
+
+        }
+
 //        pub fn rolate () -> Matrix {
 //
 //        }

@@ -12,15 +12,15 @@ ma_rgl = { git = "https://github.com/DixydL/ma_rgl.git" }
 use ma_rgl::matrix::Matrix;
 
 
-set matrix Translate 1;
+//set matrix Translate 1;
 let matrix_1 = Matrix::translate(x,y,z);
 
-set matrix Translate 2;
+//set matrix Translate 2;
 
 let matrix_2 = Matrix::translate(x,y,z);
 
 let matrix_out = matrix_1 * matrix_2;
 
-get matrix 4x4
+//get matrix 4x4
 let mat = matrix_out.get_matrix();
 ```
